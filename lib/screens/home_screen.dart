@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const HomeScreenNavbar(),
-                SizedBox(height: 30.0),
+                const SizedBox(height: 30.0),
                 RichText(
                   text: TextSpan(
                     style: Theme.of(context).textTheme.headline1,
@@ -32,7 +32,40 @@ class HomeScreen extends StatelessWidget {
                                   )),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(height: 20.0),
+                Container(
+                  height: 56,
+                  padding: const EdgeInsets.only(
+                    right: 8,
+                    left: 16,
+                    bottom: 5,
+                    top: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: kGreyColor500,
+                  ),
+                  child: TextField(
+                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                          color: kBlackColor900,
+                        ),
+                    cursorHeight: 24,
+                    decoration: InputDecoration(
+                      suffixIcon: const Icon(
+                        Icons.search,
+                        color: kGreyColor900,
+                      ),
+                      suffixIconConstraints: const BoxConstraints(
+                        maxHeight: 24,
+                      ),
+                      hintText: 'search doctor medicine etc',
+                      hintStyle: Theme.of(context).textTheme.headline5!,
+                      contentPadding: const EdgeInsets.only(bottom: 5),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

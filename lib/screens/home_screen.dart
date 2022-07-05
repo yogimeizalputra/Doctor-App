@@ -1,3 +1,4 @@
+import 'package:doctor_app/components/doctor_app_grid_menu.dart';
 import 'package:doctor_app/components/home_screen_navbar.dart';
 import 'package:doctor_app/constants.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,10 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // --- NAVBAR ---
                 const HomeScreenNavbar(),
                 const SizedBox(height: 30.0),
+                // --- HEADLINE ---
                 RichText(
                   text: TextSpan(
                     style: Theme.of(context).textTheme.headline1,
@@ -34,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
+                // --- SEARCH ---
                 Container(
                   height: 56,
                   padding: const EdgeInsets.only(
@@ -66,6 +70,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(height: 24.0),
+                // --- GRID MENU ---
+                const DoctorAppGridMenu(),
               ],
             ),
           ),

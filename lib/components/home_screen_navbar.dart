@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:doctor_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
@@ -13,9 +15,10 @@ class HomeScreenNavbar extends StatelessWidget {
         Container(
             height: 24,
             width: 24,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: Svg('assets/svg/icon-burger.svg', size: Size(24, 24))),
+                  image: const Svg('assets/svg/icon-burger.svg',
+                      size: const Size(24, 24))),
             )),
         Container(
           width: 36,

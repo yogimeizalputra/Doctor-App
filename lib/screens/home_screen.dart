@@ -1,5 +1,6 @@
 import 'package:doctor_app/components/doctor_app_grid_menu.dart';
 import 'package:doctor_app/components/home_screen_navbar.dart';
+import 'package:doctor_app/components/top_doctors_list.dart';
 import 'package:doctor_app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                         text: 'Find ',
                       ),
                       TextSpan(
-                          text: 'your doctor',
+                          text: 'your doctor here',
                           style:
                               Theme.of(context).textTheme.headline1!.copyWith(
                                     color: kGreyColor900,
@@ -73,6 +74,26 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 24.0),
                 // --- GRID MENU ---
                 const DoctorAppGridMenu(),
+                const SizedBox(height: 24.0),
+                // --- TOP DOCTORS ---
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Top Doctors',
+                      style: Theme.of(context).textTheme.headline3,
+                    ),
+                    Text(
+                      'View All',
+                      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                            color: kBlueColor,
+                          ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24.0),
+                // --- TOP DOCTORS LIST---
+                const TopDoctorsList(),
               ],
             ),
           ),
